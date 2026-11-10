@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE>404</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- debut du script
+function tableau (n) {
+  var nb;
+  this.length = n;
+  for (var i = 1; i <=n; i++)
+    if (i<10) {
+      nb = i+"";
+      nb = nb.substring(0,1);   	
+      this[i] = nb;
+    }
+  return this;
+}
+
+function conversion(couleur) {
+  var hexa1;
+  var hexa2;
+  var couleurHexa;
+  tabHex = new tableau(16);
+
+  tabHex[10]="A"; tabHex[11]="B"; tabHex[12]="C"; tabHex[13]="D"; tabHex[14]="E"; tabHex[15]="F";
+  indice = 1;
+  hexa2 = (couleur%16);
+  hexa1 = parseInt(couleur/16);
+  hexa2 = tabHex[hexa2];
+  if (hexa2 == null)
+    hexa2 = "0";
+  hexa1 = tabHex[hexa1];
+  if (hexa1 == null)
+    hexa1 = "0";
+  couleurHexa = hexa1 + hexa2;
+  return couleurHexa;
+}
+
+function degrade(texte, taille, police, RGB) {
+  var facteur = 256/(texte.length+1);
+  var i;
+  var c1,c2,c3;
+
+  for (i=0;i<texte.length;i++)   {
+    ton=facteur*i;
+    if (RGB == 0) {
+      c1 = 'FF'
+      c2 = conversion(ton);
+      c3 = c2;
+    }
+    else if (RGB == 1) {
+      c1 = conversion(ton);
+      c2 = 'FF'
+      c3 = c1;
+    }
+    else {
+      c1 = conversion(ton);
+      c2 = c1;
+      c3 = 'FF'
+    }
+   document.write ('<FONT SIZE=' + taille + ' FACE="' + police + '" COLOR="#' + c1 + c2 + c3 + '">' + texte.substring (i,i+1) + '</FONT>');
+  } 
+}
+//  Fin du script -->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#FFFFFF" LINK="#00FFFF" VLINK="#00FF00" ALINK="#FF0000">
+<CENTER>
+<TABLE WIDTH="468" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR>
+<TD WIDTH="20" HEIGHT="20"><IMG SRC="Sommaire/images/coing.gif" BORDER="0" WIDTH="20"HEIGHT="20"></TD>
+<TD WIDTH="450" HEIGHT="20" ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#324076">&nbsp;</TD>
+<TD WIDTH="20" HEIGHT="20"><IMG SRC="Sommaire/images/coind.gif" BORDER="0" WIDTH="20" HEIGHT="20"></TD>
+</TR>
+<TR align='center'>
+<TD COLSPAN="3" WIDTH="150" BGCOLOR="#324076" ALIGN="CENTER"> 
+<TABLE WIDTH="468" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+</TR>
+<TR align='center'>
+<TABLE BORDER=0 WIDTH="468" HEIGHT="20" CELLPADDING=10 BGCOLOR="#324076" VALIGN="TOP" ALIGN="CENTER">
+<TR ALIGN='Center'>
+<TD> 
+<IMG SRC="http://www.multimania.com/playzone/cool4.jpg" BORDER=0 WIDTH=468 HEIGHT=60>
+<BR>
+<br>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- debut du script
+degrade('OUPS...',7,'Starburst, Arial black',0)
+//  Fin du script -->
+</SCRIPT>
+<BR>
+<BR>
+<FONT FACE="comic sans ms" SIZE=2>L'adresse que vous avez entrée n'existe pas!!! Merci de nous contacter pour nous signaler une erreur! elle sera réparée dans les plus brefs délais!</FONT>
+<HR>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- debut du script
+degrade('REVENIR AU SOMMAIRE:',5,'Starburst, Comic Sans MS',1)
+//  Fin du script -->
+</SCRIPT>
+<BR>
+<FONT FACE="Comic Sans MS" SIZE=3 COLOR="#00FFFF"><A HREF="http://www.la-playzone.com/">PAGE D'ACCEUIL DE LA PLAYZONE</A></FONT>
+<HR>
+</TD></TR></TABLE>
+<TR>
+<TD WIDTH="20" HEIGHT="20" BGCOLOR="#324076"><IMG SRC="Sommaire/images/coingb.gif"
+BORDER="0" WIDTH="20" HEIGHT="20"></TD>
+<TD WIDTH="450" HEIGHT="20" ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#324076"><FONT FACE="Comic Sans MS" SIZE=2 COLOR="#00FFFF">Edité par <A HREF="mailto:simon.dubois@skynet.be">Sebastien Dubois</A>, copyright 1999<A HREF="http://www.la-playzone.com/" TARGET="_blank">-La Playzone-</A></FONT></TD>
+<TD WIDTH="20" HEIGHT="20" BGCOLOR="#324076"><IMG SRC="Sommaire/images/coindb.gif"
+BORDER="0" WIDTH="20" HEIGHT="20"></TD>
+</TR>
+</TABLE></TABLE>
+</CENTER>
+</BODY>
+</HTML>
+
